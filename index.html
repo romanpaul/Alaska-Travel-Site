@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="js/map.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbPArk2Gx4acuFDcasBeKgLSl0086-wGQ&callback=initMap">
+    </script>
+
+	<title>Wild Alaska Adventure Tours</title>
+    <meta name="Description" content="A travel excursion site for Southeastern Alaska"> 
+    <meta name="author" content="Roman Paul">
+
+	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Libre+Franklin" rel="stylesheet">
+    
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+    
+</head>
+
+<body>
+	
+	<header class="SiteHeader">
+  		<div class="logo">
+    		<a href="img/log.png"><img alt="Company logo" src="img/logo.png"/></a>
+  		</div>
+  		<nav role='navigation' class="menu">
+			<ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Excursions</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Find Us</a></li>
+			</ul>
+  		</nav>
+  		<div class="clearfix"></div>
+	</header>
+
+<div id="color-overlay">
+
+	<div class="banner">
+
+        <h1 class="headline">Wild Alaska Adventures</h1>
+		<span class="tagline">Get lost.</span>
+		
+	</div><!--/.banner-->
+
+</div><!--/#color-overlay-->
+
+	<div class="container">
+		<div class="grid welcome">
+
+                <h1 class="heading-text">Welcome to the edge of the map</h1>
+                <div class="activities">
+                    <p class="img-text">Redeye espresso black dark mazagran a acerbic. Cappuccino, single origin, sweet doppio robust crema irish decaffeinated milk shop qui milk. Skinny café au lait coffee, organic foam dripper milk froth pumpkin spice turkish. Grounds bar to go rich organic, est, plunger pot siphon cream decaffeinated trifecta. Skinny to go, chicory aromatic, medium spoon as id barista dripper.</p>
+
+                    <img src="img/welcome.jpg">
+
+        
+                </div>
+        </div>
+
+		<div class="grid">
+
+			<h1 class="heading-text">Excursions</h1>
+            
+            <div class="activities">
+                <h3 class="img-horseback">
+                    <span>Horseback Riding</span>
+                </h3>
+                <p class="img-text">Qui dark, id viennese seasonal lungo barista caramelization. Caramelization that at viennese saucer et white. Lungo, percolator, coffee instant, ristretto affogato, grinder caramelization grinder dripper cortado brewed. Irish strong black coffee, robusta caffeine single shot pumpkin spice espresso arabica variety.</p>
+            </div>    
+
+            <div class="activities">
+                <h3 class="img-orca">
+                    <span>Whale Watching</span>
+                </h3>
+                <p class="img-text">Qui dark, id viennese seasonal lungo barista caramelization. Caramelization that at viennese saucer et white. Lungo, percolator, coffee instant, ristretto affogato, grinder caramelization grinder dripper cortado brewed. Irish strong black coffee, robusta caffeine single shot pumpkin spice espresso arabica variety.</p>
+            </div>    
+
+            <div class="activities">
+                <h3 class="img-plane">
+                    <span>Sky Tour</span>
+                </h3>
+                <p class="img-text">Qui dark, id viennese seasonal lungo barista caramelization. Caramelization that at viennese saucer et white. Lungo, percolator, coffee instant, ristretto affogato, grinder caramelization grinder dripper cortado brewed. Irish strong black coffee, robusta caffeine single shot pumpkin spice espresso arabica variety.</p>
+            </div>    
+
+		</div><!--/.grid-->
+        
+        <div class="gallery">
+             
+            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-1.jpg" alt></div>
+
+            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-2.jpg" alt></div>
+
+            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-3.jpg" alt></div>
+
+            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-4.jpg" alt></div>
+
+            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-5.jpg" alt></div>
+
+            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-3.jpg" alt></div>
+
+            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-4.jpg" alt></div>
+
+            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-5.jpg" alt></div>
+            
+            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-5.jpg" alt></div>
+            
+            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-5.jpg" alt></div>
+            
+            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-1.jpg" alt></div>
+            
+        </div><!--/.gallery-->
+        
+        <div id="datepicker"></div>
+
+		<div class="contact">
+			
+				<h1 class="heading-text">Contact Us</h1>
+				
+			<form action="#" method="POST">
+				<fieldset>
+					<ul class="form">
+
+						<li>
+							<label for="name">Name:</label>
+							<input type="text" id="name" name="user_name">
+						</li>
+						<li>
+							<label for="mail">E-mail:</label>
+							<input type="email" id="mail" name="user_mail">
+						</li>
+		
+						<li>
+							<p>What activities are you interested in?</p>
+						</li>
+
+						<li>
+							<input type="checkbox" name="excursion" id="whale" value="whale">
+							<label for="whale">Whale Watching</label>
+						</li>
+
+						<li>
+							<input type="checkbox" name="excursion" id="plane" value="plane">
+							<label for="plane">Float Plane Sky Tour</label>
+						</li>
+
+						<li>
+							<input type="checkbox" name="excursion" id="horse" value="horse">
+							<label for="horse">Horseback Riding</label>
+						</li>
+						
+                        <li>
+                            <label for="msg">Additional Details:</label>
+                            <textarea id="msg" name="user_message"></textarea>
+                        </li>
+                        <li>
+                           <button type="submit">Submit</button>
+                        </li>
+					</ul>
+				</fieldset>
+			</form>
+
+		</div><!--/.contact-->
+        <div class="about">
+            <h1 class="heading-text">About Us</h1>
+            <p>Medium americano cinnamon galão, a seasonal eu aftertaste, brewed grinder cinnamon grinder skinny ut, mug café au lait, est variety crema at spoon saucer. Sugar, filter cortado aftertaste mug decaffeinated, sugar, half and half brewed, macchiato aromatic black, whipped acerbic, espresso, strong mug cinnamon café au lait est single origin in aromatic. Carajillo turkish strong white, bar cinnamon seasonal ristretto, black con panna beans, cortado caramelization organic breve single origin seasonal beans. Aged espresso saucer barista that macchiato, arabica sit, latte filter cinnamon iced cortado.</p>
+        </div>
+        
+        <div id="map"></div>
+    </div><!--/.container-->
+
+	<footer class="footer">
+		<p>&copy;2017 Wild Alaska Adventure Tours, LLC</p>
+	</footer>
+
+    <script src="JS/jquery.js"></script>
+    <script src="JS/jquery-ui.js"></script>
+    
+    <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
+    
+    
+</body>
+</html>
