@@ -48,7 +48,7 @@ p {
 }
 
 span {
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Libre Franklin', serif;
 }
 
 .container {
@@ -197,13 +197,12 @@ TEXT AND PICTURE GRID
 }
 
 .grid h3 {
-     padding: 30px 50px 50px 50px;
+    padding-top: 20px;
       height: 280px;
       width: 280px;
       margin: 20px auto;
-      border: 3px solid #000;
     font-size: 2rem;
-    text-transform: uppercase;
+    text-transform: uppercase; 
 }
 
 .img-horseback span,.img-orca span,.img-plane span  { 
@@ -367,3 +366,42 @@ FOOTER
 
 
 
+/***************************
+****************************
+LIGHTBOX
+****************************
+***************************/
+
+.lightbox{
+	display: flex;
+    flex-direction: column;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.7);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 20000;
+	padding-top: 30px;
+	box-sizing: border-box;
+}
+
+.lightbox img{
+	 display: block;
+  margin: 0 auto; 
+     max-width: 80%; 
+    
+}
+
+.lightbox .caption{
+	margin: 15px auto;
+	width: 90%;
+	text-align: center;
+	color: #eee;
+}
+
+@media screen and (min-width: 761px) {
+    .caption {
+        width: 60%;
+    }
+}
