@@ -7,12 +7,13 @@ BASE STYLES
 * {box-sizing: border-box;}
 
 a {
-  color: #b3b3b3;
+  color: #fff;
   text-decoration: none;
+    text-transform: uppercase;
   -webkit-transition: color 0.5s ease;
   -moz-transition: color 0.5s ease;
   transition: color 0.5s ease;
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Libre Franklin', serif;
 }
 
 a:hover {
@@ -45,6 +46,7 @@ p {
 
 .heading-text {
     font-size: 350%;
+    text-align: center;
 }
 
 span {
@@ -66,7 +68,7 @@ BACKGROUND COLORS FOR SECTIONS
 ***************************/
 
 .welcome {
-    background-color: antiquewhite;
+
 }
 
 /***************************
@@ -78,7 +80,7 @@ HEADER AND NAV
 @media screen and (min-width: 761px) {
   .logo {
     float: left;
-    margin-top: 1em;  
+    margin: 1em 0 0 1em;  
   }
 }
 
@@ -91,7 +93,7 @@ HEADER AND NAV
 }
 
 header {
-    background-color: #345e3e;
+    background-color: #52A349;
     text-align: center;
     width: 100%;
     top: 0;
@@ -99,7 +101,7 @@ header {
 }
     
 .menu {
-  background: #345e3e;
+  background: #52A349;
   border-top: 1px solid #b3b3b3;
   bottom: 0;
   left: 0;
@@ -126,6 +128,7 @@ header {
 .menu ul li {
   flex-grow: 1;
   text-align: center;
+    margin-right: 3em;
 }
 
 .clearfix:after {
@@ -166,7 +169,7 @@ BANNER
     background-position: bottom;
     background-size: cover;
     max-width: 100%;
-    height: 80vh;
+    height: 100vh;
 }
 
 @media (min-width: 769px) {
@@ -190,30 +193,37 @@ TEXT AND PICTURE GRID
 }
 
 .grid {
-    display: inline;
     flex-direction: column;
-    background-color: #99b4a3;
-    text-align: center;
+    background-color: #EAF2EF;
 }
 
 .grid h3 {
     padding-top: 20px;
       height: 280px;
       width: 280px;
-      margin: 20px auto;
+      margin: 20px 2em;
     font-size: 2rem;
     text-transform: uppercase; 
+    text-align: center;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 761px) {
+    .grid h3 {
+        margin: 20px 2em;
+    }
 }
 
 .img-horseback span,.img-orca span,.img-plane span  { 
     background-color: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3));
-    color: #fff; 
+    color: #fff;
     /*display: inline; */
 }
 
 .img-horseback { 
       background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url(../img/horseback.jpg);
     background-position: center;
+    
 }
 
 .img-orca { 
@@ -230,13 +240,18 @@ TEXT AND PICTURE GRID
 .activities {
         display: flex;
         margin: auto 0;
-        align-items: center;
         flex-wrap: wrap;
+    justify-content: space-around;
 }
+    
+    .img-horseback button {
+        position: absolute;
+        bottom: 5px;
+    }
 
 .img-text {
-    width: 40%;
-    margin: auto 0;
+    width: 50%;
+    margin: auto 0; 
 }
 }
 
@@ -320,11 +335,11 @@ ABOUT SECTION
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    background-color: #426b6a;
+    background-color: #EAF2EF;
 }
 
 .about p {
-    margin-bottom: 30px
+    margin-bottom: 3em;
 }
 
 /***************************
@@ -348,7 +363,7 @@ FOOTER
     text-align: center;
     height: 5em;
     margin-bottom: 4.5em;
-    background-color: #1e3b39;
+    background-color: #03120E;
     color: #b3b3b3
 }
 
@@ -404,4 +419,44 @@ LIGHTBOX
     .caption {
         width: 60%;
     }
+}
+
+
+.button {
+    text-align: center;
+    background-color: #293C54;
+    width: 20em;
+    padding: 2em 0;
+    margin: 20px auto 40px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+    border: solid 1px #1E441E;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.button a {
+    text-align: center;
+    padding: 2em 3.4em;
+    position: relative;
+    color: #fff;
+}
+
+.button a:hover {
+    color: #293C54;
+}
+
+.button:hover, .button:focus {
+	border: solid 1px #293C54;
+    background: none;
+    -webkit-transition-duration: 0.2s;
+	-moz-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+}
+
+.welcome p {
+    margin: 2em 0 3em 0;
 }

@@ -27,13 +27,13 @@
     var cap = $(this).attr("alt");
 
 // Add data to lighbox
-
     $img.attr('src', src);
     $caption.text(cap);
 
 // Show lightbox
 
     $lightbox.fadeIn('fast');
+      
       
 // Exit the lightbox when the div is clicked anywhere
 
