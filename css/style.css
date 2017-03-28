@@ -211,10 +211,10 @@ TEXT AND PICTURE GRID
 	}
 }
 
-.img-horseback span, .img-orca span, .img-plane span {
+.img-horseback span, .img-orca span, .img-dog span {
 	background-color: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3));
 	color: #fff;
-	/*display: inline; */
+	
 }
 
 .img-horseback {
@@ -227,8 +227,8 @@ TEXT AND PICTURE GRID
 	background-position: top;
 }
 
-.img-plane {
-	background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url(../img/floatplane.jpg);
+.img-dog {
+	background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url(../img/dogsled.jpg);
 	background-position: center;
 }
 
