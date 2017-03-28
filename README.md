@@ -1,0 +1,1 @@
+In 2016 I was lucky enough to visit Alaska and it was an amazing experience. I decided to create a mock-up of an Alaska travel site, similar to many I encountered when planning my trip. For the Javascript requirement I included a Google Maps script with customized colors and a jQuery lightbox. No framework was used.
