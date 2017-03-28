@@ -1,12 +1,10 @@
 // Create a lightbox
-
 (function() {
   var $lightbox = $("<div class='lightbox'></div>");
   var $img = $("<img>");
   var $caption = $("<p class='caption'></p>");
 
 // Hide the lightbox
-    
     $lightbox.hide();
     
 // Add image and caption to lightbox
@@ -31,12 +29,10 @@
     $caption.text(cap);
 
 // Show lightbox
-
     $lightbox.fadeIn('fast');
       
       
 // Exit the lightbox when the div is clicked anywhere
-
     $lightbox.click(function() {
       $lightbox.fadeOut('fast');
     });
