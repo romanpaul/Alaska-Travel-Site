@@ -33,7 +33,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#Excursions">Excursions</a></li>
                 <li><a href="#Contact">Contact</a></li>
-                <li><a href="#AboutLink">About</a></li>
+                <li><a href="#About">About</a></li>
 			</ul>
   		</nav>
   		<div class="clearfix"></div>
@@ -50,11 +50,14 @@
 
 </div><!--/#color-overlay-->
 
-	<div class="container">
+
+
+	
 		<div class="grid welcome">
 
                 <h1 class="heading-text">Welcome to the edge of the map</h1>
                 <div class="activities">
+
                     <p class="img-text">Redeye espresso black dark mazagran a acerbic. Cappuccino, single origin, sweet doppio robust crema irish decaffeinated milk shop qui milk. Skinny café au lait coffee, organic foam dripper milk froth pumpkin spice turkish. Grounds bar to go rich organic, est, plunger pot siphon cream decaffeinated trifecta. Skinny to go, chicory aromatic, medium spoon as id barista dripper.</p>
                     
                     <p class="img-text">Redeye espresso black dark mazagran a acerbic. Cappuccino, single origin, sweet doppio robust crema irish decaffeinated milk shop qui milk. Skinny café au lait coffee, organic foam dripper milk froth pumpkin spice turkish. Grounds bar to go rich organic, est, plunger pot siphon cream decaffeinated trifecta. Skinny to go, chicory aromatic, medium spoon as id barista dripper.</p>
@@ -89,8 +92,7 @@
             
         </div><!--/.gallery-->
 
-		<div class="grid">
-            <div  id="Excursions"></div>
+		<div class="grid" id="Excursions">
 
 			<h1 class="heading-text">Excursions</h1>
             
@@ -114,70 +116,62 @@
                 </h3>
                 <p class="img-text">Qui dark, id viennese seasonal lungo barista caramelization. Caramelization that at viennese saucer et white. Lungo, percolator, coffee instant, ristretto affogato, grinder caramelization grinder dripper cortado brewed. Irish strong black coffee, robusta caffeine single shot pumpkin spice espresso arabica variety.</p>
             </div>    
-            <div class="button">
+            <div class="button" id="Contact">
             <a href="#">Book Your Adventure</a>
             </div>
 
 		</div><!--/.grid-->
 
 		<div class="contact">
-            <div  id="Contact"></div>
 			
-				<h1 class="heading-text">Contact Us</h1>
+				<h1 class="heading-text">Contact</h1>
 				
 			<form action="#" method="POST">
 				<fieldset>
-					<ul class="form">
-
-						<li>
-							<label for="name">Name:</label>
-							<input type="text" id="name" name="user_name">
-						</li>
-						<li>
-							<label for="mail">E-mail:</label>
-							<input type="email" id="mail" name="user_mail">
-						</li>
-		
-						<li>
-							<p>What activities are you interested in?</p>
-						</li>
-
-						<li>
+                    <div class="form-1">
+						<div>
+							<label for="name">Name</label>
+							<input type="text" id="name" name="user_name" placeholder="ex. Jane Smith">
+						</div>
+                        <div>
+							<label for="mail">E-mail</label>
+							<input type="email" id="mail" name="user_mail" placeholder="example@email.com">
+                        </div>
+                        <div>
+                            <label for="msg">Your Message</label>
+                            <textarea id="msg" name="user_message" placeholder="Please enter any questions!"></textarea>
+						</div>
+                    </div>
+                    
+                    <div class="form-2">
+							<p>Which activities are you interested in?</p>
+						<div>
 							<input type="checkbox" name="excursion" id="whale" value="whale">
 							<label for="whale">Whale Watching</label>
-						</li>
-
-						<li>
+						</div>
+                        <div>
 							<input type="checkbox" name="excursion" id="plane" value="plane">
 							<label for="plane">Float Plane Sky Tour</label>
-						</li>
-
-						<li>
+                        </div>
+                        <div>
 							<input type="checkbox" name="excursion" id="horse" value="horse">
 							<label for="horse">Horseback Riding</label>
-						</li>
-						
-                        <li>
-                            <label for="msg">Additional Details:</label>
-                            <textarea id="msg" name="user_message"></textarea>
-                        </li>
-                        <li>
-                           <button type="submit">Submit</button>
-                        </li>
-					</ul>
+                        </div>
+                    </div>
+                           <button type="submit" id="About">Submit</button>
+
 				</fieldset>
 			</form>
 
 		</div><!--/.contact-->
         
-            <div  id="AboutLink"></div>
-            <div class="about">
-            <h1 class="heading-text">About Us</h1>
-            <p>Medium americano cinnamon galão, a seasonal eu aftertaste, brewed grinder cinnamon grinder skinny ut, mug café au lait, est variety crema at spoon saucer. Sugar, filter cortado aftertaste mug decaffeinated, sugar, half and half brewed, macchiato aromatic black, whipped acerbic, espresso, strong mug cinnamon café au lait est single origin in aromatic. Carajillo turkish strong white, bar cinnamon seasonal ristretto, black con panna beans, cortado caramelization organic breve single origin seasonal beans. Aged espresso saucer barista that macchiato, arabica sit, latte filter cinnamon iced cortado.</p>
-        </div>
+            <div class="about" >
+                <h1 class="heading-text">About Us</h1>
+                <p>Medium americano cinnamon galão, a seasonal eu aftertaste, brewed grinder cinnamon grinder skinny ut, mug café au lait, est variety crema at spoon saucer. Sugar, filter cortado aftertaste mug decaffeinated, sugar, half and half brewed, macchiato aromatic black, whipped acerbic, espresso, strong mug cinnamon café au lait est single origin in aromatic. Carajillo turkish strong white, bar cinnamon seasonal ristretto, black con panna beans, cortado caramelization organic breve single origin seasonal beans. Aged espresso saucer barista that macchiato, arabica sit, latte filter cinnamon iced cortado.</p>
+            </div>
         
         <div id="map"></div>
-    </div><!--/.container-->
+    
 
 	<footer class="footer">
 		<p>&copy;2017 Wild Alaska Adventure Tours, LLC</p>

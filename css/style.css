@@ -6,6 +6,11 @@ BASE STYLES
 
 * {box-sizing: border-box;}
 
+html, body {
+    padding:0;
+    margin:0;
+}
+
 a {
   color: #fff;
   text-decoration: none;
@@ -17,10 +22,6 @@ a {
 }
 
 a:hover {
-  color: #2a2428;
-    text-decoration-line: underline;
-}
-a.active {
   color: #2a2428;
 }
 
@@ -36,12 +37,15 @@ li {
 }
 
 p {
-    color: #2a2428;
     font-family: 'Libre Baskerville', serif;
     max-width: 90%;
     padding: 0 30px;
-    margin: 0 auto;
+    /*margin: 0 auto; */
 
+}
+
+.welcome p {
+    margin: 2em 0 3em 0;
 }
 
 .heading-text {
@@ -53,38 +57,20 @@ span {
     font-family: 'Libre Franklin', serif;
 }
 
-.container {
-    display: flex; 
-    flex-wrap: wrap;
-    padding: 40px 0px;
-    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);  
-    padding: 0;
-}
-
-/***************************
-****************************
-BACKGROUND COLORS FOR SECTIONS
-****************************
-***************************/
-
-.welcome {
-
-}
-
 /***************************
 ****************************
 HEADER AND NAV
 ****************************
 ***************************/
 
-@media screen and (min-width: 761px) {
+@media screen and (min-width: 820px) {
   .logo {
     float: left;
     margin: 1em 0 0 1em;  
   }
 }
 
-@media screen and (min-width: 761px) {
+@media screen and (min-width: 820px) {
 .SiteHeader {
   position: fixed;
   width: 100%;
@@ -110,12 +96,12 @@ header {
   z-index: 9999;  
 }
 
-@media screen and (min-width: 761px) {
+@media screen and (min-width: 820px) {
   .menu {
     float: right;
     border: none;
     position: relative;
-    width: initial;
+    width: initial; 
   }
     
 }
@@ -123,12 +109,12 @@ header {
 .menu ul {
   display: flex;
   list-style: none;
+  padding-left: 0; /* centers ul due to inherent padding before list */
 }
 
 .menu ul li {
   flex-grow: 1;
   text-align: center;
-    margin-right: 3em;
 }
 
 .clearfix:after {
@@ -136,6 +122,20 @@ header {
   display: table;  
   clear: both;
 }
+
+.menu ul li a {
+    font-size: 0.75rem;
+    padding: 1em; /* enlarges clickable area */
+}
+    @media screen and (min-width: 820px) {
+        .menu ul li a {
+      padding: 1em; /* enlarges clickable area */
+      margin-right: 3em;
+      font-size: 1em;
+      
+    
+    }
+  }
 
 
 /***************************
@@ -257,25 +257,89 @@ TEXT AND PICTURE GRID
 
 /***************************
 ****************************
+BOOKING BUTTON
+****************************
+***************************/
+
+.button {
+    text-align: center;
+    background-color: #293C54;
+    width: 20em;
+    padding: 2em 0;
+    margin: 4em auto 5em;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+    border: solid 1px #1E441E;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.button a {
+    text-align: center;
+    padding: 2em 3.4em;
+    position: relative;
+    color: #fff;
+}
+
+.button a:hover {
+    color: #293C54;
+}
+
+.button:hover, .button:focus {
+	border: solid 1px #293C54;
+    background: none;
+    -webkit-transition-duration: 0.2s;
+	-moz-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+}
+
+/***************************
+****************************
 IMAGE GALLERY
 ****************************
 ***************************/
 
 .gallery {
-  display: flexbox;
-  -ms-flex-wrap: wrap;
-  -ms-flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  /*-ms-flex-direction: column;
   -webkit-flex-flow: row wrap; 
   flex-flow: row wrap; 
-  display: -webkit-box;
-  display: flex; 
+  display: -webkit-box; */
 }
 
 .gallery div {
-  -webkit-box-flex: auto;
+  /*-webkit-box-flex: auto; */
   flex: auto; 
-  width: 300px;
-    font-size: 0;
+  font-size: 0; /* closes margins */
+}
+
+/*two column*/
+@media screen and (min-width: 20em) {
+   .gallery div {
+      width: 48%;
+   }
+}
+/*three column*/
+@media screen and (min-width: 40em) {
+   .gallery div {
+      width: 32%;
+   }
+}
+/*four column*/
+@media screen and (min-width: 75em) {
+   .gallery div {
+      width: 23.8%;
+   }
+}
+/*five column*/
+@media screen and (min-width: 100em) {
+   .gallery div {
+      width: 18.8%;
+   }
 }
     
 .gallery img { 
@@ -294,34 +358,151 @@ IMAGE GALLERY
 
 /***************************
 ****************************
+LIGHTBOX
+****************************
+***************************/
+
+.lightbox{
+	display: flex;
+    flex-direction: column;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.7);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 20000;
+	padding-top: 30px;
+	box-sizing: border-box;
+}
+
+.lightbox img{
+	 display: block;
+  margin: 0 auto; 
+     max-width: 80%; 
+    
+}
+
+.lightbox .caption{
+	margin: 15px auto;
+	width: 90%;
+	text-align: center;
+	color: #eee;
+}
+
+@media screen and (min-width: 761px) {
+    .caption {
+        width: 60%;
+    }
+}
+
+
+/***************************
+****************************
 CONTACT FORM, SECTION, AND BACKGROUND
 ****************************
 ***************************/
 
  .contact {
     width: 100%;
+    min-height: 500px;
     background: url('../img/form-map.jpg') no-repeat;
     background-attachment: fixed;
     background-position: center center;
     background-size: cover; 
-    color: oldlace;
+    color: #fff;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+
 }
 
 fieldset {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 30px;
-    background: rgba(255, 255, 255, 0.4);
-    color: black;
-    border-radius: 3px
+    margin: 1em;
+    padding: 2em;
+    background: rgba(255, 255, 255, 0.5);
+    color: #000;
+    border-radius: 3px;
 }
 
-label {
-    font-family: 'Libre Baskerville', serif;
+@media screen and (min-width: 761px) {
+    fieldset {
+        width: 40em;
+    }
+}
+
+.form-1 input, textarea {
+    display: block;
+    margin-bottom: 1em;   
+    padding: .50em;
+    width: 15em;
+}
+
+.form-1 textarea {
+    height: 5em;
+}
+
+.form-1 label {
+    font-size: .85em;
+}
+
+
+.form-2 input, label {
+    margin-bottom: 1em;
+}
+
+.form-2 input {
+    margin-right: .5em;
+}
+
+.form-2 p {
+    padding-left: 0;
+}
+
+.form-2 {
+    margin-top: 2em;
+}
+
+@media screen and (min-width: 761px) {
+.form-1
+{
+float: left;
+margin-right: 5em;
+}
+
+.form-2 {
+    margin-top: 0;
+}
+}
+
+button {
+    width: 15em;
+    height: 2.5em;
+    background-color: #293C54;
+    color: #fff;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+    border: solid 1px #1E441E;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+input:focus, textarea:focus { /* changes the default blue glow to a green that matches my design */
+    outline: none !important;
+    border: 3px solid #52A349;
+    box-shadow: 0 0 10px #52A349;
 }
 
 /***************************
@@ -376,87 +557,4 @@ FOOTER
     .footer {
         margin-bottom: 0px;
     }
-}
-
-
-
-
-/***************************
-****************************
-LIGHTBOX
-****************************
-***************************/
-
-.lightbox{
-	display: flex;
-    flex-direction: column;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0,0,0,.7);
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 20000;
-	padding-top: 30px;
-	box-sizing: border-box;
-}
-
-.lightbox img{
-	 display: block;
-  margin: 0 auto; 
-     max-width: 80%; 
-    
-}
-
-.lightbox .caption{
-	margin: 15px auto;
-	width: 90%;
-	text-align: center;
-	color: #eee;
-}
-
-@media screen and (min-width: 761px) {
-    .caption {
-        width: 60%;
-    }
-}
-
-
-.button {
-    text-align: center;
-    background-color: #293C54;
-    width: 20em;
-    padding: 2em 0;
-    margin: 20px auto 40px;
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-    border: solid 1px #1E441E;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
-	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
-	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
-	box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.5);
-}
-
-.button a {
-    text-align: center;
-    padding: 2em 3.4em;
-    position: relative;
-    color: #fff;
-}
-
-.button a:hover {
-    color: #293C54;
-}
-
-.button:hover, .button:focus {
-	border: solid 1px #293C54;
-    background: none;
-    -webkit-transition-duration: 0.2s;
-	-moz-transition-duration: 0.2s;
-	transition-duration: 0.2s;
-}
-
-.welcome p {
-    margin: 2em 0 3em 0;
 }
