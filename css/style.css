@@ -60,14 +60,14 @@ HEADER AND NAV
 ****************************
 ***************************/
 
-@media screen and (min-width: 820px) {
+@media screen and (min-width: 837px) {
 	.logo {
 		float: left;
 		margin: 0;
 	}
 }
 
-@media screen and (min-width: 820px) {
+@media screen and (min-width: 837px) {
 	.SiteHeader {
 		position: fixed;
 		width: 100%;
@@ -93,7 +93,7 @@ header {
 	z-index: 9999;
 }
 
-@media screen and (min-width: 820px) {
+@media screen and (min-width: 837px) {
 	.menu {
 		float: right;
 		border: none;
@@ -124,7 +124,7 @@ header {
 	padding: 1em; /* enlarges clickable area */
 }
 
-@media screen and (min-width: 820px) {
+@media screen and (min-width: 837px) {
 	.menu ul li a {
 		padding: 1em; /* enlarges clickable area */
 		margin-right: 3em;
@@ -165,7 +165,7 @@ BANNER
 	height: 100vh;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 836px) {
 	#color-overlay {
 		margin-top: 70px;
 		background-position: top;
